@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <script type="text/javascript" charset="utf-8">
+       function adder(ops, res){
+         var numbers = document.getElementById(ops).innerHTML;
+         numbers = numbers.split('+');
+         var result = document.getElementById(res);
+         result.innerHTML =  "=" + (parseInt(numbers[0]) + parseInt(numbers[1]));
+       }
+
+       function another(){
+        var num1 = Math.floor(Math.random()*10000);
+        var num2 = Math.floor(Math.random()*10000);
+        var sum = num1.toString() + '+' + num2.toString();
+        document.getElementById('op').innerHTML = sum;
+        document.getElementById('res').innerHTML = '';
+       }
+     </script>
+     <title>Ejercicio 5.5.5</title>
+   </head>
+   <body>
+     <p>Adder...<span id='op'>5+3</span>
+     <span id="res"></span> <a href="javascript:adder('op', 'res')">Add!</a></p>
+     <p><a href="javascript:another()">Another!</p>
+   </body>
+</html>
